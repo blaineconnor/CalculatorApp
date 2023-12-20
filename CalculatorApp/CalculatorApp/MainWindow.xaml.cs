@@ -67,10 +67,7 @@ namespace CalculatorApp
                     tempNumber *= lastNumber;
                 resultLabel.Content = tempNumber.ToString();
             }
-        }
-
-        // 50 + 5% (2.5) = (52.5)
-        // 80 + 10% (8) = (88)
+        }       
 
         private void NegativeButton_Click(object sender, RoutedEventArgs e)
         {
@@ -109,11 +106,30 @@ namespace CalculatorApp
         {
             if (resultLabel.Content.ToString().Contains("."))
             {
-                // Do nothing
+                // Do Nothing
             }
             else
             {
                 resultLabel.Content = $"{resultLabel.Content}.";
+            }
+        }
+
+        private void resultLabel_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Label_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (Mouse.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+
             }
         }
 
