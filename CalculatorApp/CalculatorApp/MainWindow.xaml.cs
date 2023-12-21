@@ -112,12 +112,7 @@ namespace CalculatorApp
             {
                 resultLabel.Content = $"{resultLabel.Content}.";
             }
-        }
-
-        private void resultLabel_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
+        }     
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
@@ -129,9 +124,13 @@ namespace CalculatorApp
             if (Mouse.LeftButton == MouseButtonState.Pressed)
             {
                 DragMove();
-
             }
         }
+
+        private void MinimizeButton_Click(object sender, RoutedEventArgs e)
+        {            
+                WindowState = WindowState.Minimized;
+                    }
 
         private void NumberButton_Click(object sender, RoutedEventArgs e)
         {

@@ -4,7 +4,14 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net7.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <AssemblyName>$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace>$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <ApplicationIcon>icon (3).ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="icon (3).ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="DevExpress.Wpf.Core" Version="23.1.6" />

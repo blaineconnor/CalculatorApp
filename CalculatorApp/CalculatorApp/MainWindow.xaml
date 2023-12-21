@@ -20,12 +20,15 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Border Grid.Row="0" Grid.ColumnSpan="4"  HorizontalAlignment="Right" MouseLeftButtonDown="Label_MouseLeftButtonDown">           
-            <StackPanel>
-                <Border BorderBrush="#FF444444">
-            <Button x:Name="CloseButton" Click="CloseButton_Click" FontSize="30" Content="X" Cursor="Hand" Background="#FF444444" BorderBrush="Black" FontWeight="Bold" Foreground="#FFF9F9F9"/>
+        <Border Grid.Row="0" Grid.ColumnSpan="4" Background="#444444" MouseLeftButtonDown="Label_MouseLeftButtonDown">        
+            <dx:DXDockPanel HorizontalAlignment="Right">
+                <Border  BorderBrush="#FF444444">
+                    <Button x:Name="MinimizeButton" Click="MinimizeButton_Click"   FontSize="30" Content="_" Cursor="Hand" Background="Orange" BorderBrush="Black" FontWeight="Bold" Width="44" Foreground="#FFF9F9F9"/>
                 </Border>
-            </StackPanel>        
+                <Border BorderBrush="#FF444444">
+                    <Button x:Name="CloseButton" Click="CloseButton_Click" FontSize="30" Content="X" Cursor="Hand" Background="Orange" BorderBrush="Black" FontWeight="Bold" Foreground="#FFF9F9F9"  Width="44"/>
+                </Border>
+            </dx:DXDockPanel>
         </Border>
 
         <Label x:Name="resultLabel"
